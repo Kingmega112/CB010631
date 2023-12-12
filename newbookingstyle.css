@@ -1,0 +1,780 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+    --primary: #0077b6;
+    --secondary: #48cae4;
+    --black: #333;
+    --box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.273);
+    --border: 2rem solid rgba(0, 0, 0.1);
+    --outline: .1rem solid rgba(0, 0, 0.1);
+    --text-light: #767268;
+    --extra-light: #f3f4f6;
+    --white: #ffffff;
+    --linear_bg: rgba(209, 208, 208, 0.847);
+    --max-width: 1200px;
+    --card-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.7);
+    --card-hover-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.7);
+    --hover-background: #808080 ;
+    --light-background: #eee;
+
+    --second-heading: #6f046abe;
+
+    --sample: aqua;
+
+    --table-bg: lightgray
+
+}
+
+
+* {
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+html {
+    /* font-size: 62.5%; */
+    overflow-x: hidden;
+    scroll-padding-top: smooth;
+
+}
+
+body {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--primary);
+    border-radius: .5rem;
+}
+
+
+/* navigation bar  */
+.container {
+    margin: 0 auto;
+}
+
+.head {
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(to top, transparent, var(--linear_bg)), url(../home1.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+
+.head header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    padding: 15px 0px 15px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.5s;
+}
+
+.head .sticky {
+    background: var(--white);
+    padding: 15px 0px 15px 0px;
+    box-shadow: var(--box-shadow);
+}
+
+/* logo  */
+.head header .logo a {
+    display: block;
+    margin-left: 8rem;
+    
+
+}
+
+/* hamburger menu  */
+.head header nav .ham {
+    height: 24px;
+    width: 35px;
+    position: absolute;
+    right: 3%;
+    top: 35px;
+    z-index: 5;
+    cursor: pointer;
+    display: none;
+}
+
+.head header nav .ham span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: var(--black);
+    transition: .3s;
+    transition-property: transform,opacity;
+
+}
+
+.head header nav .ham span:nth-child(2){
+    margin: 7px 0px;
+}
+
+.head header nav .nav-list {
+    list-style: none;
+    margin: 0 80px 0 0px;
+    
+}
+
+.head header nav .nav-list li {
+    display: inline-block;
+    position: relative;
+}
+
+.head header nav .nav-list li a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--sample);
+    margin-left: 55px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-bottom: 2px solid transparent;
+    transition: .3s;
+
+    position: relative;
+    border: none;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25);
+    transition-duration: 400ms;
+    transition-property: color;
+    
+}
+
+.head header nav .nav-list li:hover,
+ .head header nav .nav-list li:focus  {
+    color: var(--primary);
+}
+
+.head header nav .nav-list li:hover .dropdown {
+    display: block;
+}
+
+.head header nav .nav-list li a:hover:after,
+ .head header nav .nav-list li a:focus:after {
+    width: 100%;
+    left: 0%;
+}
+
+.head header nav .nav-list li a:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: var(--primary);
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25);
+    transition-duration: 400ms;
+    transition-property: width, left;
+}
+
+.head header nav .nav-list li.btn a {
+    color: var(--white);
+    background: var(--primary);
+    border: none;
+    padding: 12px 32px;
+    line-height: 1.1;
+}
+
+.head header nav .nav-list li a:hover,
+.head header nav .nav-list li.active a {
+    color: var(--primary);
+}
+
+
+
+.head header nav .nav-list li.btn a:hover {
+    color: var(--black);
+    background: var(--secondary);
+    transition: .3s;
+}
+
+
+/* hamburger menu media queiries */
+@media screen and (max-width: 1306px) {
+    .head header nav .ham{
+        display: block;
+        height: 30px;
+    }
+
+    .click{
+        top: 46px;
+    }
+    .click span {
+        position: absolute;
+        margin-top: 12px;
+    }
+    .click span:first-child{
+        transform: rotate(-40deg);
+    }
+    .click span:nth-child(2){
+        opacity: 0;
+        margin: 0;
+    }
+    .click span:last-child{
+        transform: rotate(40deg);
+        top: 0px;
+    }
+    .head header nav .nav-list{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: -100%;
+        width: 65%;
+    
+        background: var(--black);
+        z-index: 2;
+        padding: 6% 9%;
+        transition: .3s right;
+        margin: 0 0px 0 0px;
+    }
+    .head header nav .nav-list li{
+        display: block;
+    }
+    .head header nav .nav-list li a {
+        display: block;
+        font-size: 18px;
+        font-weight: 400;
+        margin-left: 0;
+        margin-bottom: 30px;
+        border-bottom: none;
+        text-align: center;
+    }
+    .head header nav .nav-list li:not(:last-child) a:hover,
+    .head header nav .nav-list li:not(:last-child) a:focus{
+        border-bottom: none;
+        color: var(--primary);
+    }
+    .head header nav .nav-list li.active a {
+        border-bottom: none;
+    } 
+    .head header nav .nav-list li.btn a{
+        position: absolute;
+        bottom: 1%;
+        right: 9%;
+        left: 9%;
+        
+    }
+    .head header nav .nav-list.open{
+        right: 0%;
+        height: 400px;
+        background: var(--white);
+        margin-top: 2.5rem;
+    }
+
+    .head header nav .nav-list.open li a {
+        color: var(--black);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5rem;
+    }
+   
+}
+
+
+
+/* navigation bar end  */
+
+.head .banner {
+    text-align: center;
+    padding-top: 300px;
+}
+
+.head .banner .text {
+    margin-bottom: 40px;
+}
+
+
+
+.head .banner .text {
+    margin-left: 5%;
+}
+
+.head .banner .text h1 {
+    font-size: 68px;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1.2;
+    color: var(--white);
+    margin: 10px 0px 15px;
+}
+
+.head .banner .text h2 {
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 4px;
+}
+
+.head .banner .text p {
+    font-size: 20px;
+    font-weight: 400;
+    max-width: 100%;
+    color: var(--white);
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width:600px) {
+    .head .banner .text h1 {
+        font-size: 38px;
+    }
+
+    .head .banner .text p {
+        font-size: 15px;
+    }
+}
+
+
+/* Booking form */
+article  {
+    /* position: relative;
+    top: 35%; */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    padding: 3%;
+    /* margin-left: 10%;
+    margin-right: 10%; */
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+#bkg-form-container {
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; */
+    margin-left: 3%;
+    margin-right: 3%;
+    width: 100%;
+    background: white;
+    padding: 25px 30px;
+    border-radius: 1em;
+}
+
+#adventure-form-container {
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; */
+    margin-left: 3%;
+    margin-right: 3%;
+    width: 100%;
+    background: white;
+    padding: 25px 30px;
+    border-radius: 1em;
+}
+
+#bkg-form-container .sub-title, .sub-title, .summary-sub-title {
+    font-size: 25pt;
+    font-weight: 600;
+    position: relative;
+    font-family: 'Playfair Display';
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+
+
+
+.booking-input-cl section, .booking-dropdown-cl .form-col, .booking-date-cl section, .booking-checkbox-cl section, .booking-extra-input-cl .extra-1, .booking-extra-input-cl .extra-2, .booking-extra-input-cl .extra-3 .checkbox-grp, .booking-input-text-cl section, .booking-dropdown-cl section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2%;
+    padding: 2%;
+    background-color: rgba(181, 185, 185, 0.16);
+    border-radius: 1em;
+}
+
+.booking-input-cl label, .booking-dropdown-cl label, .booking-date-cl label, .booking-extra-input-cl .extra-1 label, .booking-extra-input-cl .extra-2 label, .booking-extra-input-cl .extra-3 .checkbox-grp label, .booking-input-text-cl label{
+    font-weight: 600;
+    font-size: 12pt;
+    flex-basis: 100%;
+}
+
+.booking-extra-input-cl h2 {
+    font-size: 14pt;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.booking-input-cl .check-group, .booking-extra-input-cl .check-group, .booking-extra-input-cl .checkbox-grp, .booking-input-text-cl .promo-group{
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+    gap: 5px;
+}
+
+.booking-input-cl input, .booking-extra-input-cl input{
+    /* border: none; */
+    width: 45px;
+    font-size: 14pt;
+    padding-left: 5px;
+    text-align: center;
+}
+
+.booking-input-cl button, .booking-extra-input-cl button {
+    font-size: 14pt;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: var(--primary);
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.booking-input-cl button:hover, .booking-extra-input-cl button:hover {
+    background-color: var(--secondary);
+    color: var(--black);
+} 
+
+.booking-dropdown-cl select, .booking-date-cl input, .booking-input-text-cl .promo-group input {
+    width: 250px;
+}
+
+/* Button section */
+.btn-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+
+
+
+.booking-btn button {
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.7em 2em;
+    border: 3px solid var(--primary);
+    border-radius: 2px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: var(--primary);
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+    cursor: pointer;
+}
+  
+.booking-btn button:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: var(--primary);
+    z-index: -1;
+}
+  
+.booking-btn button:hover, button:focus {
+    color: white;
+}
+  
+.booking-btn button:hover:before, button:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+  
+.booking-btn button:active {
+    transform: scale(0.9);
+}
+
+/* Loyality Button */
+.loyality-btn button {
+    font-size: 15px;
+    color: var(--white);
+    background: var(--primary);
+    border: none;
+    padding: 0.7em 2em;
+    line-height: 1.1;
+}
+
+.loyality-btn button:hover {
+    color: var(--black);
+    background: var(--secondary);
+}
+
+
+/* Calculation Details Table */
+.calculating-table-container .charge-table-tittle {
+    margin: 3% 0 0 5%;
+    display: block;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: italic;
+}
+
+
+.calculating-tables {
+    display: flex;
+    justify-content: center;
+    /* padding-top: 3%; */
+    background: var(--white);
+}
+
+
+.booking-selection {
+    margin-left: 3%;
+    margin-right: 3%;
+    width: 100%;
+    background: white;
+    padding: 25px 30px;
+    border-radius: 1em;
+}
+
+
+.booking-selection .charge-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+.booking-selection .charge-table td {
+    border: 1px solid var(--black);
+    text-align: center;
+    padding: 1%;
+}
+
+.booking-selection .charge-table th{
+    text-align: center;
+    font-size: 18px;
+    background-color: var(--table-bg);
+    border: 1px solid var(--black);
+}
+
+.booking-selection .charge-table td{
+    font-size: 15px;
+    font-weight: 300;
+}
+
+/* Dynamic Table Section */
+.dynamic-table {
+    display: flex;
+    justify-content: center;
+    padding: 3%;
+}
+
+
+
+.summary-table-container {
+    margin-left: 3%;
+    margin-right: 3%;
+    width: 100%;
+    background: white;
+    padding: 25px 30px;
+    border-radius: 1em;
+}
+
+
+.summary-table-container #bookingSummaryTable, .summary-table-container #currentBookingSummaryTable, #overallSummaryTable, #showFavTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+
+.summary-table-container #bookingSummaryTable td , .summary-table-container #currentBookingSummaryTable .details-coloumn{
+    /* border: 1px solid var(--black); */
+    padding: 1%;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: left;
+}
+
+.currency-coloumn {
+    text-align: right;
+    padding: 1%;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+
+.summary-table-container #bookingSummaryTable th, .summary-table-container #currentBookingSummaryTable th{
+    font-size: 18px;
+    background-color: var(--table-bg);
+    border: 1px solid var(--black);
+    text-align: left;
+    padding: 5px;
+}
+
+.summary-table-container .booking-summary-section p {
+    font-weight: 400;
+    font-size: 15px;
+    text-align: left;
+}
+
+.booking-summary-section {
+    padding: 20px;
+    border: 1px solid var(--black);
+}
+
+
+
+
+
+
+/* Overall Booking Table */
+.overall-booking-table-container, .show-favourites-container {
+    display: inline-block;
+    width: 100%;
+    padding: 0 20%;
+    margin-top: 25px;
+}
+
+.overall-booking-section, .show-favourites-section {
+    padding: 20px;
+    border: 1px solid var(--black);
+}
+
+
+.overall-booking-section table, th, td , .show-favourites-section table, th, td{
+    border: 1px solid var(--black);
+    text-align: left;
+
+}
+
+.overall-booking-section th, td, .show-favourites-section th, td {
+    padding: 8px;
+}
+
+.overall-booking-section th, .show-favourites-section th {
+    background-color: var(--table-bg);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.overall-booking-section td, .show-favourites-section td {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+
+
+.material-symbols-outlined {
+    color: var(--white);
+    background-color: #00ff00;
+    border-radius: 50%;
+}
+
+#promoCodeError {
+    color: red;
+}
+
+.addfav-button {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* footer start  */
+
+.footer {
+    margin-top: 10%;
+    background-color: var(--extra-light);
+}
+
+.footer:hover{
+    background-color: var(--hover-background);
+    transition: 1s;
+}
+
+#footer__container {
+    display: grid;
+    grid-template-columns: 2fr repeat(3, 1fr);
+    gap: 5rem;
+    text-align: center;
+}
+
+
+.footer__col h4 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.footer__col p {
+    margin-bottom: 1rem;
+    color: var(--black);
+    transition: 0.3s;
+    font-size: 1.5rem;
+}
+
+
+.footer__col a {
+    display: flex;
+    margin-bottom: 1rem;
+    color: var(--black);
+    transition: 0.3s;
+    font-size: 1.5rem;
+    cursor: pointer;
+    justify-content: center;
+}
+
+
+.footer__col a:hover {
+    color: var(--secondary);
+}
+
+.footer .footer__copyrights {
+    text-align: center;
+    padding-bottom: 2rem;
+    padding-top: 5rem;
+}
+
+
+
+/* footer media queiry  start*/
+
+@media screen and (max-width:900px) {
+    #footer__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media screen and (max-width:600px) {
+    #footer__container {
+        gap: 2rem;
+    }
+}
+
+
+/* footer media queiry end  */
+
+
+/* footer end  */

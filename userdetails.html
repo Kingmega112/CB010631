@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./userdetails.css">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+
+    <title>UserDetails</title>
+</head>
+<body>
+    <section class="head">
+        <section class="container">
+            <header>
+                <section class="logo">
+                    <a href=""><img src="./logo1.png" alt=""></a>
+                </section>
+
+                <nav>
+                    <section class="ham">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </section>
+
+                    <ul class="nav-list">
+                        <li class="active"><a href="./index.html">Home</a></li>
+                        <li><a href="./branches.html">Branches</a></li>
+                        <li><a href="./adventures.html">Adventures</a></li>
+                        <li><a href="./restaurants.html">Restaurants</a>
+                        </li>
+                        <li><a href="./gallery.html">Gallery</a></li>
+                        <li class="btn"><a href="./booking.html">Book Now</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+        </section>
+    </section>
+
+    <section class="title">
+        <h1>Book Your Stay and Adventure</h1>
+    </section>
+
+    <article>
+        <section id="dtContainer">
+            <!-- Sub Title -->
+            <h2 class="sub-title">Enter your Details</h2>
+            <!-- User Details Form -->
+            <form method="get" id="detailsForm">
+            
+                <section class="user-details">
+
+                    <!-- Full name -->
+                    <section class="input-box">
+                        <label for="fName">Full Name</label>
+                        <input type="text" name="fName" id="fName" placeholder="Enter your full name">
+                        <section class="error" id="fNameError"></section>
+                    </section>
+
+                    <!-- Mobile Number -->
+                    <section class="input-box">
+                        <label for="moblNo">Mobile Number</label>
+                        <input type="tel" name="moblNo" id="moblNo" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                        <section class="error" id="moblNoError"></section>
+                    </section>
+
+                    <!-- <section class="input-box">
+                        <label for="moblNo">Mobile Number</label>
+                        <input type="tel" name="moblNo" id="moblNo" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                        <section class="error" id="moblError"></section>
+                    </section> -->
+
+
+                    <!-- Email Address -->
+                    <section class="input-box">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="example@gmail.com" required>
+                        <section class="error" id="emailError"></section>
+                    </section>
+
+                    <!-- Card Number -->
+                    <section class="input-box">
+                        <label for="cardNumber">Card Number</label>
+                        <input type="text" name="cardNumber" id="cardNumber" placeholder="0000 0000 0000 0000" maxlength="19" required>
+                        <section class="error-msg"></section>
+                    </section>
+
+                    <!-- Expiry Date -->
+                    <section class="input-box">
+                        <label for="expiryDate">Expiry Date</label>
+                        <input type="text" name="expiryDate" id="expiryDate" placeholder="MM/YY" required>
+                        <section class="error" id="expiryDateError"></section>
+                    </section>
+
+
+
+
+                    <!-- <section class="input-box">
+                        <label for="expiryDate">Expiry Date</label>
+                        <input type="text" name="expiryDate" id="expiryDate" placeholder="MM/YY" required>
+                        <section class="error-msg"></section>
+                    </section> -->
+
+                    <!-- CVC/CVV Number -->
+                    <section class="input-box">
+                        <label for="cvc-cvv">CVC / CVV</label>
+                        <input type="text" name="cvc-cvv" id="cvc-cvv" placeholder="000" maxlength="3" required>
+                        <section class="error" id="cvc-cvvError"></section>
+                    </section>
+
+
+                    <!-- <section class="input-box">
+                        <label for="cvc-cvv">CVC / CVV</label>
+                        <input type="text" name="cvc-cvv" id="cvc-cvv" placeholder="000" maxlength="3" required>
+                        <section class="error-msg"></section>
+                    </section> -->
+
+                    <!-- Name on Card -->
+                    <section class="input-box">
+                        <label for="cardName">Name on Card</label>
+                        <input type="text" name="cardName" id="cardName" placeholder="Enter your name on card" required>
+                        <section class="error" id="cardNameError"></section>
+                    </section>
+
+
+                    <!-- <section class="input-box">
+                        <label for="cardName">Name on Card</label>
+                        <input type="text" name="cardName" id="cardName" placeholder="Enter you name on card" required>
+                        <section class="error-msg"></section>
+                    </section> -->
+
+                    <section class="payButton">
+                        <a href="./confirmation.html">
+                            <button type="submit" id="payButton">Pay <span id="amount"></span></button>
+                        </a>
+                    </section>
+
+                </section>
+            </form>
+        </section>
+
+        <!-- Overall Booking Summary Table -->
+        <section class="overall-booking-table-container" id="dtContainer">
+            <section class="overall-booking-section">
+                <h2 class="summary-sub-title">Overall Booking</h2>
+                
+                <table id="overallSummaryTable"></table>
+
+                <!-- <p id="totalHotelBooking"></p>
+                <p id="totalAdventureBooking"></p> -->
+            </section>
+        </section>
+
+
+    </article>
+
+
+  
+    <!-- footer start  -->
+    <footer class="footer">
+        <section class="section__container" id="footer__container">
+            <section class="footer__col">
+                <h4>Cinnamon</h4>
+                <p>Cinnamon is a premier hotel booking website that offers a seamless and
+                convenient way to find and book accommodations worldwide.</p>
+                <p>With a user-friendly interface and a vast selection of hotels,
+                Cinnamon aims to provide a stress-free experience for travelers
+                seeking the perfect stay.</p>
+            </section>
+            <section class="footer__col" id="footer__col">
+                <h4>Company</h4>
+                <a href="./branches.html">Branches</a>
+                <a href="./adventures.html">Adventures</a>
+                <a href="./restaurants.html">Restaurants</a>
+                <a href="./gallery.html">Gallery</a>
+                <a href="">Contact Us</a>
+            </section>
+            <section class="footer__col" id="footer__col">
+                <h4>Legal</h4>
+                <a href="">FAQs</a>
+                <a href="">Terms & Conditions</a>
+                <a href="">Privacy Policy</a>
+            </section>
+            <section class="footer__col" id="footer__col">
+                <h4>Resourses</h4>
+                <a href="">Social Media</a>
+                <a href="">Help Center</a>
+                <a href="">Partnerships</a>
+            </section>
+        </section>
+        <section class="footer__copyrights">
+            <p>Copyright © Cinnamon Hotels and Resorts. All rights reserved.</p>
+        </section>
+    </footer>
+
+    <script src="./userdetails.js"></script>
+</body>
+</html>

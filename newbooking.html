@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./newbookingstyle.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Book Now</title>
+</head>
+<body>
+    <section class="head">
+        <section class="container">
+            <header>
+                <section class="logo">
+                    <a href=""><img src="./logo1.png" alt=""></a>
+                </section>
+
+                <nav>
+                    <section class="ham">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </section>
+
+                    <ul class="nav-list">
+                        <li class="active"><a href="./index.html">Home</a></li>
+                        <li><a href="./branches.html">Branches</a></li>
+                        <li><a href="./adventures.html">Adventures</a></li>
+                        <li><a href="./restaurants.html">Restaurants</a>
+                        </li>
+                        <li><a href="./gallery.html">Gallery</a></li>
+                        <li class="btn"><a href="./booking.html">Book Now</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <section class="banner">
+                <section class="text">
+                    <h1>Book Your Stay and Adventure</h1>
+                    <p>Plan Your Perfect Getaway!</p>
+                </section>
+            </section>
+        </section>
+    </section>
+
+
+    <article>
+        <section id="bkg-form-container">
+            <!-- Sub Title -->
+            <h2 class="sub-title">Hotel Booking</h2>
+
+            <!-- Booking Form -->
+            <form method="get" id="bookingForm">
+                <section class="booking-details">
+
+                    <!-- Hotels List -->
+                    <section class="booking-dropdown-cl">
+                        <section>
+                            <label for="slctHotels">Choose your Hotel/Resort</label>
+                            <section class="dropdown-group">
+                                <select name="slct_hotels" id="slctHotels" class="input">
+                                    <option value="" selected>Select Hotel/Resort</option>
+                                    <option value="Cinnamon Grand Colombo">Cinnamon Grand Colombo</option>
+                                    <option value="Cinnamon Lakeside Colombo">Cinnamon Lakeside Colombo</option>
+                                    <option value="Cinnamon Red Colombo">Cinnamon Red Colombo</option>
+                                    <option value="Cinnamon Life Integrated Resort">Cinnamon Life Integrated Resort</option>
+                                    <option value="Cinnamon Bentota Beach">Cinnamon Bentota Beach</option>
+                                    <option value="Cinnamon Bey Beruwala">Cinnamon Bey Beruwala</option>
+                                    <option value="Hikka Tranz by Cinnamon">Hikka Tranz by Cinnamon</option>
+                                    <option value="Cinnamon Wild Yala">Cinnamon Wild Yala</option>
+                                    <option value="Cinnamon Citadel Kandy">Cinnamon Citadel Kandy</option>
+                                    <option value="Cinnamon Lodge Habarana">Cinnamon Lodge Habarana</option>
+                                    <option value="Habarana Village by Cinnamon">Habarana Village by Cinnamon</option>
+                                    <option value="Trinco Blu by Cinnamon">Trinco Blu by Cinnamon</option>
+                                    <option value="Ellaidhoo Maldives by Cinnamon">Ellaidhoo Maldives by Cinnamon</option>
+                                    <option value="Cinnamon Hakuraa Huraa Maldives">Cinnamon Hakuraa Huraa Maldives</option>
+                                    <option value="Cinnamon Dhonveli Maldives">Cinnamon Dhonveli Maldives</option>
+                                    <option value="Cinnamon Velifushi Maldives">Cinnamon Velifushi Maldives</option>
+                                </select>
+                            </section>
+                        </section>
+                        
+                    </section>
+
+                    <!-- Check In -->
+                    <section class="booking-date-cl">
+                        <section>
+                            <label for="checkInDate">Check In</label>
+                            <section class="date-group">
+                                <input type="date" name="Check In" id="checkInDate" required>
+                            </section>
+                        </section>
+                    </section>
+
+                    <!-- Check Out -->
+                    <section class="booking-date-cl">
+                        <section>
+                            <label for="checkOutDate">Check Out</label>
+                            <section class="date-group">
+                                <input type="date" name="checkOutDate" id="checkOutDate" required>
+                            </section>
+                        </section>
+                    </section>
+
+                    <!-- Single Rooms -->
+                    <section class="booking-input-cl">
+                        <section>
+                            <label for="numOfRooms">Number of Single Rooms</label>
+                            <section class="check-group">
+                                <button class="deduct">-</button>
+                                <input type="number" name="numOfRooms" id="numOfSingleRooms" min="0" value="numOfSingleRooms">
+                                <button class="add">+</button>
+                            </section>
+                        </section>
+                    </section>
+
+                    <!-- Double Room -->
+                    <section class="booking-input-cl">
+                        <section>
+                            <label for="numOfRooms">Number of Double Rooms</label>
+                            <section class="check-group">
+                                <button class="deduct">-</button>
+                                <input type="number" name="numOfRooms" id="numOfDoubleRooms" min="0" value="numOfDoubleRooms">
+                                <button class="add">+</button>
+                            </section>
+                        </section>
+                    </section>
+
+                    <!-- Triple Room -->
+                    <section class="booking-input-cl">
+                        <section>
+                            <label for="numOfRooms">Number of Triple rooms</label>
+                            <section class="check-group">
+                                <button class="deduct">-</button>
+                                <input type="number" name="numOfRooms" id="numOfTripleRooms" min="0" value="numOfTripleRooms">
+                                <button class="add">+</button>
+                            </section>
+                        </section>
+                    </section>
+
+                    <!-- Adults -->
+                    <section class="booking-input-cl">
+                        <section>
+                            <label for="adults">Adults</label>
+                            <section class="check-group">
+                                <button class="deduct">-</button>
+                                <input type="number" name="adults" id="adults" min="0">
+                                <button class="add">+</button>
+                            </section>
+                        </section>
+                    </section>
+
+                    <!-- Child -->
+                    <section class="booking-input-cl">
+                        <section>
+                            <label for="child">Child</label>
+                            <section class="check-group">
+                                <button class="deduct">-</button>
+                                <input type="number" name="child" id="child" min="0">
+                                <button class="add">+</button>
+                            </section>
+                        </section>
+                    </section>
+
+                    <!-- Extra Requirement -->
+                    <section class="booking-extra-input-cl">
+                        <section>
+                            <h2>Extra Requirements</h2>
+                            <section class="extra-1">
+                                <label for="numOfExtraBed">Number of Extra Bed</label>
+                                <section class="check-group">
+                                    <button class="deduct">-</button>
+                                    <input type="number" name="numOfExtraBed" id="numOfExtraBed" min="0">
+                                    <button class="add">+</button>
+                                </section>
+                            </section>
+                            <section class="extra-2">
+                                <label for="numOfExtraMeals">Number of Extra Meals</label>
+                                <section class="check-group">
+                                    <button class="deduct">-</button>
+                                    <input type="number" name="numOfExtraMeals" id="numOfExtraMeals" min="0">
+                                    <button class="add">+</button>
+                                </section>
+                            </section>
+                            <section class="extra-3">
+                                <section class="checkbox-grp">
+                                    <label for="wifi">WiFi</label>
+                                    <input type="checkbox" id="wifi" name="wifi">
+                                </section>
+                                <section class="checkbox-grp">
+                                    <label for="poolView">Pool View</label>
+                                    <input type="checkbox" id="poolView" name="poolView">
+                                </section>
+                                <section class="checkbox-grp">
+                                    <label for="gardenView">Garden View</label>
+                                    <input type="checkbox" id="gardenView" name="gardenView">
+                                </section>
+                            </section>
+                        </section>
+                    </section>
+
+                    <!-- Promo -->
+                    <section class="booking-input-text-cl">
+                        <section>
+                            <label for="promoCode">Promo</label>
+                            <section class="promo-group">
+                                <input type="text" id="promoCode" name="promoCode">
+                                <p id="promoCodeError"></p>
+                            </section>
+                        </section>
+                    </section>
+
+                    
+
+                    <!-- Button Section -->
+                    <section class="btn-section">
+                        <!-- Loyality button -->
+                        <section class="loyality-btn">
+                            <section>
+                                <button type="button" id="loyality">Check Loyalty</button>
+                            </section>
+                        </section>
+
+                        <!-- Book Now button -->
+                        <section class="booking-btn">
+                            <section>
+                                <a href="./userdetails.html"><button type="button" id="bookingNow">Book Now</button></a>
+                            </section>
+                        </section>
+                    </section>
+
+                </section>
+            </form>
+        </section>
+
+        <section id="adventure-form-container">
+            <!-- Adventure Sub Title -->
+            <h2 class="sub-title">Adventure Booking</h2>
+
+            <!-- Aventure Booking Form -->
+            <form method="get" id="adventuresForm">
+                <section class="aventures-details">
+
+                    <!-- Hotels List -->
+                    <section class="booking-dropdown-cl">
+                        <section>
+                            <label for="slctAdventures">Adventures Type</label>
+                            <section class="dropdown-group">
+                                <select name="slctAdventures" id="slctAdventures" class="input">
+                                    <option value="" selected>Select Adventure</option>
+                                    <option value="diving">Diving</option>
+                                    
+                                </select>
+                            </section>
+                        </section>
+                        
+                    </section>
+
+                    <!-- Local Adults -->
+                    <section class="booking-input-cl">
+                        <section>
+                            <label for="advNumOfLocalAdults">Local Adults</label>
+                            <section class="check-group">
+                                <button class="deduct">-</button>
+                                <input type="number" name="advNumOfLocalAdults" id="advNumOfLocalAdults" min="0">
+                                <button class="add">+</button>
+                            </section>
+                        </section>
+                    </section>
+
+                    <!-- Local Kids -->
+                    <section class="booking-input-cl">
+                        <section>
+                            <label for="advNumOfLocalKids">Local Kids</label>
+                            <section class="check-group">
+                                <button class="deduct">-</button>
+                                <input type="number" name="advNumOfLocalKids" id="advNumOfLocalKids" min="0">
+                                <button class="add">+</button>
+                            </section>
+                        </section>
+                    </section>
+
+                    <!-- Forign Adults -->
+                    <section class="booking-input-cl">
+                        <section>
+                            <label for="advNumOfForeignAdults">Foreign Adults</label>
+                            <section class="check-group">
+                                <button class="deduct">-</button>
+                                <input type="number" name="advNumOfForeignAdults" id="advNumOfForeignAdults" min="0">
+                                <button class="add">+</button>
+                            </section>
+                        </section>
+                    </section>
+
+                    <!-- Forign Kids -->
+                    <section class="booking-input-cl">
+                        <section>
+                            <label for="advNumOfForeignKids">Foreign Kids</label>
+                            <section class="check-group">
+                                <button class="deduct">-</button>
+                                <input type="number" name="advNumOfForeignKids" id="advNumOfForeignKids" min="0">
+                                <button class="add">+</button>
+                            </section>
+                        </section>
+                    </section>
+
+                    <!-- Extra Adventure Requirement -->
+                    <section class="booking-extra-input-cl">
+                        <section>
+                            <h2>If You Need Only</h2>
+                            <section class="extra-3">
+                                <section class="checkbox-grp">
+                                    <label for="advAdultGuide">Guide for Adult</label>
+                                    <input type="checkbox" id="advAdultGuide" name="guide">
+                                </section>
+                                <section class="checkbox-grp">
+                                    <label for="advKidsGuide">Guide for Kids</label>
+                                    <input type="checkbox" id="advKidsGuide" name="guide">
+                                </section>
+                            </section>
+                        </section>
+                    </section>
+
+                    <!-- Adventure Button Section -->
+                    <section class="btn-section">
+                        <!-- Add Favourite button -->
+                        <!-- <section class="loyality-btn">
+                            <section>
+                                <button type="button">Check Loyalty</button>
+                            </section>
+                        </section> -->
+
+                        <!-- Book Now button -->
+                        <section class="booking-btn">
+                            <section>
+                                <button type="button">Book Adventure</button>
+                            </section>
+                        </section>
+                    </section>
+                    
+
+                    
+
+                </section>
+            </form>
+        </section>
+    </article>
+    
+    <section class="calculating-table-container">
+        <h2 class="charge-table-tittle">Here's how the charges are being calculated,</h2>
+        <section class="calculating-tables">
+            <!-- Charge Details Table -->
+           <section class="booking-selection">
+               <section>
+                   <table class="charge-table">
+                       <tr>
+                           <th>Category</th>
+                           <th>Charges in LKR</th>
+                       </tr>
+                       <tr>
+                        <td>Single room </td>
+                        <td>25,000.00</td>
+                    </tr>
+                       <tr>
+                           <td>Double room </td>
+                           <td>35,000.00</td>
+                       </tr>
+                       <tr>
+                           <td>Triple room </td>
+                           <td>40,000.00</td>
+                       </tr>
+                       <tr>
+                           <td>Kids above 5 years of age</td>
+                           <td>5000.00 extra for meals</td>
+                       </tr>
+                       <tr>
+                           <td>Extra bed</td>
+                           <td>8000.00</td>
+                       </tr>
+                       <tr>
+                           <td>If you have promo code </td>
+                           <td>5% discount </td>
+                       </tr>
+                   </table>
+               </section>
+           </section>
+   
+           <!-- Adventure Charge Details Table -->
+           <section class="booking-selection">
+               <section>
+                   <table class="charge-table">
+                       <tr>
+                           <th>Category</th>
+                           <th>Charges in LKR (1 hr)</th>
+                       </tr>
+                       <tr>
+                           <td>Diving for local Adults</td>
+                           <td>5000.00</td>
+                       </tr>
+                       <tr>
+                           <td>Diving for local kids (above 5 years)</td>
+                           <td>2,000.00</td>
+                       </tr>
+                       <tr>
+                           <td>Diving for foreign adults </td>
+                           <td>10,000.00</td>
+                       </tr>
+                       <tr>
+                           <td>Diving for foreign kids</td>
+                           <td>5,000.00</td>
+                       </tr>
+                       <tr>
+                           <td>Guide for Adults</td>
+                           <td>1,000.00</td>
+                       </tr>
+                       <tr>
+                           <td>Guide for Kids</td>
+                           <td>500.00</td>
+                       </tr>
+                   </table>
+               </section>
+           </section>
+       </section>   
+    </section>
+    
+    <!-- Dynamic Tables Section -->
+    <section class="dynamic-table">
+        <!-- Current Booking Table Section -->
+        <section class="summary-table-container">
+            <section class="booking-summary-section">
+                <h2 class="summary-sub-title">Current Hotel Booking</h2>
+                <!-- The Table will be populated when user enter their inputs in real time -->
+                <table id="bookingSummaryTable">
+                    
+                </table>
+
+                <section class="addfav-button">
+                    <button type="submit" id="addFAv">Add to Fav</button>
+                    <button type="button" id="seeFav">See your Favourite</button>
+                </section>
+
+                <!-- <section class="show-favourites">
+
+                    
+                    
+                </section> -->
+                
+                <!-- <tr>
+                    <th>Categories</th>
+                    <th>Details/Quantity</th>
+                </tr>
+
+                
+                <tbody>
+
+                </tbody> -->
+
+                <p id="currentHotelBookingCost"></p>
+                <p id="currentHotelBookingDiscountPrice"></p>
+                <!-- Current Hotel Booking Cost: 
+                Current Hotel Booking Discounted Price: LKR 0.00 -->
+            </section>
+        </section>
+
+        <!-- Summary Table Section -->
+        <section class="summary-table-container">
+            <section class="booking-summary-section">
+                <h2 class="summary-sub-title">Current Adventure Booking</h2>
+                <table id="currentBookingSummaryTable">
+                    
+                </table>
+
+                <p id="currentAdventureCost"></p>
+            
+            </section>
+        </section>
+
+    </section>
+
+    <!-- Overall Booking Summary Table -->
+    <section class="overall-booking-table-container">
+        <section class="overall-booking-section">
+            <h2 class="summary-sub-title">Overall Booking</h2>
+            
+            <table id="overallSummaryTable"></table>
+
+            <!-- <p id="totalHotelBooking"></p>
+            <p id="totalAdventureBooking"></p> -->
+        </section>
+    </section>
+
+
+
+
+
+
+    <section class="show-favourites-container">
+        <section class="show-favourites-section">
+        
+
+            <section class="show-favourites">
+
+                <table id="showFavTable"></table>
+                <p id="showHotelBookingcost"></p>
+
+                <section id="clrBtn">
+                    <button type="button" id="clearFavBtn">Clear Favourite</button>
+                </section>
+                
+
+            </section>
+
+        </section>
+    </section>
+    
+
+    <!-- footer start  -->
+    <footer class="footer">
+        <section class="section__container" id="footer__container">
+            <section class="footer__col">
+                <h4>Cinnamon</h4>
+                <p>Cinnamon is a premier hotel booking website that offers a seamless and
+                convenient way to find and book accommodations worldwide.</p>
+                <p>With a user-friendly interface and a vast selection of hotels,
+                Cinnamon aims to provide a stress-free experience for travelers
+                seeking the perfect stay.</p>
+            </section>
+            <section class="footer__col" id="footer__col">
+                <h4>Company</h4>
+                <a href="./branches.html">Branches</a>
+                <a href="./adventures.html">Adventures</a>
+                <a href="./restaurants.html">Restaurants</a>
+                <a href="./gallery.html">Gallery</a>
+                <a href="">Contact Us</a>
+            </section>
+            <section class="footer__col" id="footer__col">
+                <h4>Legal</h4>
+                <a href="">FAQs</a>
+                <a href="">Terms & Conditions</a>
+                <a href="">Privacy Policy</a>
+            </section>
+            <section class="footer__col" id="footer__col">
+                <h4>Resourses</h4>
+                <a href="">Social Media</a>
+                <a href="">Help Center</a>
+                <a href="">Partnerships</a>
+            </section>
+        </section>
+        <section class="footer__copyrights">
+            <p>Copyright © Cinnamon Hotels and Resorts. All rights reserved.</p>
+        </section>
+    </footer>
+
+    <script src="./newbookingmain.js"></script>
+</body>
+</html>
